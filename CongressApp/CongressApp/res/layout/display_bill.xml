@@ -1,0 +1,351 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:layout_weight="1"
+    android:scrollbars="none">
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay"
+        android:id="@+id/bill_app_toolbar">
+
+
+        <android.support.v7.widget.Toolbar
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/darkgray"
+            android:id="@+id/bill_toolbar"
+            app:popupTheme="@style/AppTheme.PopupOverlay"
+            app:title="Bill Info" />
+    </android.support.design.widget.AppBarLayout>
+
+    <CheckBox
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:button="@drawable/favorite"
+        android:layout_below="@+id/bill_app_toolbar"
+        android:gravity="right"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="25dp"
+        android:paddingBottom="30dp"
+        android:layout_marginTop="20dp"
+        android:id="@+id/bill_fav_star"/>
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:stretchColumns="*"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="20dp"
+        android:layout_below="@+id/bill_fav_star">
+
+        <TableRow
+
+            android:layout_height="fill_parent"
+            android:layout_width="0dp"
+            android:paddingBottom="20dp">
+
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:id="@+id/bill_id_text"
+                android:text="Bill ID:"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:layout_weight="1"
+                android:paddingBottom="10dp"
+
+                />
+
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:id="@+id/bill_id"
+                android:text="Bill ID"
+                android:gravity="right"
+                android:textColor="@color/black"
+                android:layout_alignParentRight="true"
+                android:layout_weight="1"
+                android:paddingBottom="10dp"
+                />
+        </TableRow>
+
+        <TableRow
+
+            android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            android:paddingBottom="20dp">
+
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:id="@+id/bill_title_text"
+                android:text="Title:"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:layout_weight="0.4"
+                android:paddingBottom="10dp"
+
+                />
+
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_width="0dp"
+                android:id="@+id/bill_title"
+                android:text="Bill Title"
+                android:gravity="right"
+                android:textColor="@color/black"
+                android:layout_alignParentRight="true"
+                android:layout_weight="1"
+                android:paddingBottom="10dp"/>
+
+        </TableRow>
+        <TableRow
+
+            android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            android:paddingBottom="20dp">
+
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:id="@+id/bill_type_text"
+                android:text="Bill Type:"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:layout_weight="0.4"
+                android:paddingBottom="10dp"
+
+                />
+
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_width="0dp"
+                android:id="@+id/bill_type"
+                android:text="Bill Type"
+                android:gravity="right"
+                android:textColor="@color/black"
+                android:layout_alignParentRight="true"
+                android:layout_weight="1"
+                android:paddingBottom="10dp"/>
+
+        </TableRow>
+        <TableRow
+
+            android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            android:paddingBottom="20dp">
+
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:id="@+id/bill_sponsor_text"
+                android:text="Sponsor:"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:layout_weight="0.4"
+                android:paddingBottom="10dp"
+
+                />
+
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_width="0dp"
+                android:id="@+id/bill_sponsor"
+                android:text="Sponsor"
+                android:gravity="right"
+                android:textColor="@color/black"
+                android:layout_alignParentRight="true"
+                android:layout_weight="1"
+                android:paddingBottom="10dp"/>
+
+        </TableRow>
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingBottom="20dp">
+
+            <TextView
+                android:id="@+id/bill_chamber_text"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:text="Chamber:"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:layout_weight="1"
+                />
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="50dp"
+                android:id="@+id/billchamberImg"
+                android:layout_weight="1"
+                android:layout_marginLeft="110dp"
+                android:gravity="right"
+                />
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:id="@+id/bill_chamber"
+                android:text="Chamber"
+                android:gravity="right"
+                android:textColor="@color/black"
+                android:layout_alignParentRight="true"
+                android:layout_weight="1"
+                />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingBottom="20dp">
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:id="@+id/bill_status_text"
+                android:text="Status:"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:layout_weight="1"
+
+                />
+
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:id="@+id/bill_status"
+                android:text="Bill status"
+                android:gravity="right"
+                android:textColor="@color/black"
+                android:layout_weight="1"
+                android:layout_alignParentRight="true"
+
+                />
+
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingBottom="20dp">
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:id="@+id/introduced_on_text"
+                android:text="Introduced On"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:layout_weight="1"
+
+                />
+
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:id="@+id/bill_introduced_on"
+                android:text="Introduced On"
+                android:gravity="right"
+                android:textColor="@color/black"
+                android:layout_alignParentRight="true"
+                android:layout_weight="1"
+                />
+
+
+        </TableRow>
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingBottom="20dp">
+
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:id="@+id/bill_congress_url_text"
+                android:text="Congress URL:"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:layout_weight="1"
+                />
+
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_width="0dp"
+                android:id="@+id/bill_congress_url"
+                android:text="congress url"
+                android:gravity="right"
+                android:layout_alignParentRight="true"
+                android:textColor="@color/black"
+                android:layout_weight="1"
+                />
+
+        </TableRow>
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingBottom="20dp">
+
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:id="@+id/bill_version_status_text"
+                android:text="Version Status:"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:layout_weight="1"
+                />
+
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:id="@+id/bill_version_status"
+                android:text="Version Status"
+                android:gravity="right"
+                android:layout_alignParentRight="true"
+                android:textColor="@color/black"
+                android:layout_weight="1"
+                />
+
+        </TableRow>
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingBottom="20dp">
+
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:id="@+id/bill_url_text"
+                android:text="Bill URL:"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:layout_weight="1"
+                />
+
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:id="@+id/bill_url"
+                android:text="bill url"
+                android:gravity="right"
+                android:layout_alignParentRight="true"
+                android:textColor="@color/black"
+                android:layout_weight="1"
+                />
+
+        </TableRow>
+    </TableLayout>
+
+</RelativeLayout>
+</ScrollView>

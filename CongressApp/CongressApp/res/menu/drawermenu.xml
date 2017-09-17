@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+
+    <item
+          android:id="@+id/nav_legislators"
+          android:icon="@drawable/ic_legislators"
+         android:title="Legislators"/>
+
+    <item
+          android:id="@+id/nav_bills"
+          android:icon="@drawable/ic_bills"
+          android:title="Bills"/>
+
+    <item
+          android:id="@+id/nav_committees"
+          android:icon="@drawable/ic_committees"
+        android:title="Committees"/>
+
+    <item
+        android:id="@+id/nav_favorites"
+        android:icon="@drawable/ic_star_border_black_24dp"
+        android:title="Favorites"/>
+
+
+    <item android:title="Other">
+        <menu>
+            <item
+                android:id="@+id/nav_aboutMe"
+                android:title="About Me" />
+
+        </menu>
+    </item>
+
+
+</menu>
